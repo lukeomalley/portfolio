@@ -7,7 +7,7 @@ const TitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 50px;
+  margin: 2rem 0;
   letter-spacing: 5px;
   font-size: 2rem;
 `;

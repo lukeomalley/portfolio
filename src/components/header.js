@@ -8,6 +8,7 @@ const HeaderWrapper = styled.div`
   grid-gap: 20px;
   justify-content: center;
   font-size: 1.15rem;
+  margin-bottom: 1rem;
 
   a {
     text-decoration: none;
