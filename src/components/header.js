@@ -7,13 +7,11 @@ const HeaderWrapper = styled.div`
   grid-template-columns: repeat(5, auto);
   grid-gap: 20px;
   justify-content: center;
+  font-size: 1.15rem;
 
   a {
     text-decoration: none;
     color: var(--mainBlack);
-  }
-
-  a:hover {
   }
 
   .currentPage {
@@ -31,7 +29,7 @@ const Header = ({ currentPage }) => {
         about
       </Link>
       <Link
-        to="prjoects"
+        to="projects"
         className={currentPage === 'projects' ? 'currentPage' : null}
       >
         projects

@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 import Title from '../components/Title';
 import Header from '../components/Header';
 
-const IndexPage = () => (
+const ResumePage = () => (
   <Layout>
     <SEO title="Resume" />
     <Title text={`Luke O'Malley`} />
@@ -14,4 +14,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default ResumePage;

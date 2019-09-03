@@ -5,12 +5,13 @@ import SEO from '../components/seo';
 import Title from '../components/Title';
 import Header from '../components/Header';
 
-const IndexPage = () => (
+const ContactPage = () => (
   <Layout>
     <SEO title="Contact" />
     <Title text={`Luke O'Malley`} />
     <Header currentPage={'contact'} />
+    <h1>Contact Page</h1>
   </Layout>
 );
 
-export default IndexPage;
+export default ContactPage;
