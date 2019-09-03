@@ -1,42 +1,61 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const HeaderWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 20px;
+  justify-content: center;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  a {
+    text-decoration: none;
+    color: var(--mainBlack);
+  }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+  a:hover {
+  }
 
-export default Header
+  .currentPage {
+    border-bottom: 1px solid black;
+  }
+`;
+
+const Header = ({ currentPage }) => {
+  return (
+    <HeaderWrapper>
+      <Link
+        to="about"
+        className={currentPage === 'about' ? 'currentPage' : null}
+      >
+        about
+      </Link>
+      <Link
+        to="prjoects"
+        className={currentPage === 'projects' ? 'currentPage' : null}
+      >
+        projects
+      </Link>
+      <Link
+        to="skills"
+        className={currentPage === 'skills' ? 'currentPage' : null}
+      >
+        skills
+      </Link>
+      <Link
+        to="resume"
+        className={currentPage === 'resume' ? 'currentPage' : null}
+      >
+        resume
+      </Link>
+      <Link
+        to="contact"
+        className={currentPage === 'contact' ? 'currentPage' : null}
+      >
+        contact
+      </Link>
+    </HeaderWrapper>
+  );
+};
+
+export default Header;

@@ -7,9 +7,10 @@ import Header from '../components/Header';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Projects" />
     <Title text={`Luke O'Malley`} />
-    <Header currentPage={'about'} />
+    <Header currentPage={'projects'} />
+    <h1>Projects Page</h1>
   </Layout>
 );
 
